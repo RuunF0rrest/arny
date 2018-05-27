@@ -1,4 +1,4 @@
 #include "rogue.hpp"
 
-Rogue::Rogue(int hp_limit, int damage)
-: Warrior(hp_limit, damage) {}
+Rogue::Rogue(UnitState* state, Attack* attack)
+: Warrior(state, attack) {}

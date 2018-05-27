@@ -1,14 +1,12 @@
 #include "warrior.hpp"
 
-Warrior::Warrior(int hp_limit, int damage)
-: _state(new UnitState(hp_limit))
-, _attack(new Attack(Damage(damage)))
+Warrior::Warrior(UnitState* state, Attack* attack)
+: _state(state)
+, _attack(attack)
 {}
 
 void Warrior::attack(Unit &enemy) {
-    _attack->perform_attack(enemy);
-
-    enemy.counter_attack(*this);
+    _attack->perform_attack(*this, enemy);
 }
 
 void Warrior::counter_attack(Unit &enemy) {

@@ -3,13 +3,16 @@
 
 #include "../abilities/damage.hpp"
 
+#include "stdexcept"
+
 struct Damage;
 struct Attack;
 
 struct Unit {
 
   enum Units {
-    SOLDIER
+    SOLDIER,
+    ROGUE
   };
 
   virtual void attack(Unit& enemy) = 0;

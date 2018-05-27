@@ -10,7 +10,7 @@ struct UnitState;
 struct Attack;
 
 struct Warrior : Unit {
-  Warrior(int hp_limit, int damage);
+  Warrior(UnitState* state, Attack* attack);
 
   virtual void attack(Unit &enemy);
 

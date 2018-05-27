@@ -4,7 +4,7 @@
 #include "warrior.hpp"
 
 struct Rogue : Warrior {
-  Rogue(int hp_limit, int damage);
+  Rogue(UnitState* state, Attack* attack);
 
 };
 

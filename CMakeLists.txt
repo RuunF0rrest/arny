@@ -16,6 +16,7 @@ set(SOURCE_FILES
     src/abilities/unit_state.cpp
     src/abilities/attack.cpp
     src/abilities/damage.cpp
+    src/abilities/rogue_attack.cpp
     )
 
 add_executable(army ${SOURCE_FILES})

@@ -1,3 +1,4 @@
 #include "soldier.hpp"
 
-Soldier::Soldier(int hp_limit, int damage) : Warrior(hp_limit, damage) {}
+Soldier::Soldier(UnitState* state, Attack* attack)
+: Warrior(state, attack) {}

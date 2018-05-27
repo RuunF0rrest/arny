@@ -4,12 +4,12 @@
 int main() {
   std::cout << "Hello from Clion" << std::endl;
 
-  Unit* soldier = Unit::create(Unit::SOLDIER);
+  Unit* rogue = Unit::create(Unit::ROGUE);
   Unit* target = Unit::create(Unit::SOLDIER);
 
-  soldier->attack(*target);
+  rogue->attack(*target);
 
-  std::cout << "Attacker hp : " << soldier->get_hp() << std::endl;
+  std::cout << "Rogue hp : " << rogue->get_hp() << std::endl;
   std::cout << "Target hp: " << target->get_hp() << std::endl;
 
   return 0;

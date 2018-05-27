@@ -4,10 +4,13 @@
 #include "damage.hpp"
 #include "../units/unit.hpp"
 
+struct Necromancer;
+
 struct Attack {
   Attack(const Damage& dmg);
 
   virtual void perform_attack(Unit& attacker ,Unit &target);
+  virtual void perform_attack(Necromancer& attacker ,Unit &target);
 
   virtual void perform_counter_attack(Unit &unit);
 

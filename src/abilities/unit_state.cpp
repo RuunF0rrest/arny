@@ -24,3 +24,17 @@ void UnitState::decrease_hp(int value) {
 
     return;
 }
+
+int UnitState::get_hp_limit() const {
+  return _hp_limit;
+}
+
+void UnitState::add_hp(int amount) {
+  if (_current_hp + amount > _hp_limit) {
+    _current_hp = _hp_limit;
+  } else {
+    _current_hp += amount;
+  }
+
+  return;
+}

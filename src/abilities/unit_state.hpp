@@ -7,6 +7,8 @@ struct UnitState {
   UnitState(int hp_limit);
 
   int get_hp() const;
+  int get_hp_limit() const;
+  void add_hp(int amount);
 
   virtual void take_damage(const MagicalDamage &damage);
   virtual void take_damage(const PhysicalDamage &damage);

@@ -4,12 +4,13 @@
 #include "unit.hpp"
 #include "../abilities/attack.hpp"
 #include "../abilities/unit_state.hpp"
+#include "../utils/observable.hpp"
 
 
 struct UnitState;
 struct Attack;
 
-struct Warrior : Unit {
+struct Warrior : Unit  {
   Warrior(UnitState* state, Attack* attack);
 
   virtual void attack(Unit &enemy);
@@ -21,6 +22,8 @@ struct Warrior : Unit {
   virtual void take_damage(const PhysicalDamage &damage);
 
   virtual int get_hp();
+
+  virtual int get_hp_limit();
 
 
   UnitState* _state;

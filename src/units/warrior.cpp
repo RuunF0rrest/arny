@@ -24,3 +24,7 @@ void Warrior::take_damage(const PhysicalDamage &damage) {
 int Warrior::get_hp() {
     return _state->get_hp();
 }
+
+int Warrior::get_hp_limit() {
+    return _state->get_hp_limit();
+}

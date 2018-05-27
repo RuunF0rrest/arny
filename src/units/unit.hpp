@@ -2,13 +2,14 @@
 #define ARMY_UNIT_HPP
 
 #include "../abilities/damage.hpp"
+#include "../utils/observable.hpp"
 
 #include "stdexcept"
 
 struct Damage;
 struct Attack;
 
-struct Unit {
+struct Unit : Observable {
 
   enum Units {
     SOLDIER,
@@ -25,6 +26,8 @@ struct Unit {
   virtual void counter_attack(Unit& enemy) = 0;
 
   virtual int get_hp() = 0;
+
+  virtual int get_hp_limit() = 0;
 
   static Unit* create(Units type);
 

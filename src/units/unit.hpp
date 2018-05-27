@@ -12,7 +12,8 @@ struct Unit {
 
   enum Units {
     SOLDIER,
-    ROGUE
+    ROGUE,
+    BERSERKER
   };
 
   virtual void attack(Unit& enemy) = 0;

@@ -14,11 +14,11 @@ void Warrior::counter_attack(Unit &enemy) {
 }
 
 void Warrior::take_damage(const MagicalDamage &damage) {
-    _state->decrease_hp(damage.get_value());
+    _state->take_damage(damage);
 }
 
 void Warrior::take_damage(const PhysicalDamage &damage) {
-    _state->decrease_hp(damage.get_value());
+    _state->take_damage(damage);
 }
 
 int Warrior::get_hp() {

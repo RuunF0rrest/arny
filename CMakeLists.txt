@@ -12,11 +12,13 @@ set(SOURCE_FILES
     src/units/soldier.cpp
     src/units/warrior.cpp
     src/units/rogue.cpp
+    src/units/berserker.cpp
 
     src/abilities/unit_state.cpp
     src/abilities/attack.cpp
     src/abilities/damage.cpp
     src/abilities/rogue_attack.cpp
+    src/abilities/berserker_state.cpp
     )
 
 add_executable(army ${SOURCE_FILES})
